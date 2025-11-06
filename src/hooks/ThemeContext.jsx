@@ -1,10 +1,10 @@
-import React from 'react'
+
 import { createContext } from 'react'
-const Context =()=> 
+const ThemeContext = 
     createContext({
         theme : "dark",
         toggleTheme : ()=>{}
     })
 
 
-export default Context
+export default ThemeContext
