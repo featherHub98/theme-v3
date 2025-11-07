@@ -1,9 +1,22 @@
+[data-theme="light"]{
+    --primary-color :#007bff;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+}
+[data-theme="dark"] {
+    --primary-color: #66ccff;
+    --background-color: #333333;
+    --text-color: #ffffff;
+  }
 .App {
   text-align: center;
+   
 }
-
-
-
+.Theme{
+background-color: var(--background-color);
+  color : var(--text-color);
+  border: 1px solid var(--primary-color);
+}
 
 .App-header {
   
@@ -13,17 +26,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+ 
   
 }
-[data-theme="light"] .App-header{
-    --primary-color :#007bff;
-    --bg-color: #ffffff;
-    --text-color: #333333;
-}
-[data-theme="dark"] .App-header{
-    --primary-color: #66ccff;
-    --background-color: #333333;
-    --text-color: #ffffff;
-  }
-
 

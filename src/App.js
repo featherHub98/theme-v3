@@ -11,18 +11,21 @@ function App() {
   const [isLogged,setIsLogged] = useState(false)
   
   return (
-    <TogglePage>
+    <div className='Theme'>
+    <TogglePage >
+      <LoginContext.Provider value={{isLogged,setIsLogged}}>
     <BrowserRouter>
-    <LoginContext.Provider value={{isLogged,setIsLogged}}>
-      {isLogged && <NavBar/>}
-      </LoginContext.Provider>
+      
+       {isLogged && <NavBar/>}
     <Container className='App-header'>
       <Routes>
       <Route path='/' element={<LoginPage/>}></Route>
       <Route path='/dummyPage' element={<DummyPage/>}></Route></Routes>
     </Container>
     </BrowserRouter>
+    </LoginContext.Provider>
     </TogglePage>
+    </div>
   );
 }
 
