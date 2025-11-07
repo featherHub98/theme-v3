@@ -1,0 +1,7 @@
+problems encountered:
+1)  Form onSubmit={handleSubmit} handleSubmit should have no () or event can't be used
+2) <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => { setEmail(e.target.value) }} /> should be used to update email or pass
+3) isLogged not updating => changed from context wrapping navbar to wrapping container;
+4) themes not changing => when declaring  --bg-color: #ffffff; it should be later used like this bg-color : var(--bg-color);
+5) navbar rerendering so context lost => change Navbar.Link href ='...' to Navbar.Link as={Link} to ="..." 
+so it can work like Link from react-router-dom
