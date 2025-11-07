@@ -1,11 +1,11 @@
-import React, { useState,useEffect,useContext } from 'react'
+import  { useState,useEffect,useContext } from 'react'
 import ThemeContext from '../../hooks/ThemeContext'
 import './themes.css'
 
 
 export const useTheme =()=> useContext(ThemeContext);
 export const TogglePage=({children})=> {   
-    const [theme,setTheme] = useState("dark")
+    const [theme,setTheme] = useState("light")
     
     useEffect (()=>
        { document.documentElement.setAttribute("data-theme",theme)

@@ -2,11 +2,14 @@
     --primary-color :#007bff;
     --bg-color: #ffffff;
     --text-color: #333333;
+    --text-muted-color-light: #6c757d; 
 }
 [data-theme="dark"] {
     --primary-color: #66ccff;
     --background-color: #333333;
     --text-color: #ffffff;
+    --text-muted-color-dark: #b0b0b0;
+    
   }
 .App {
   text-align: center;
