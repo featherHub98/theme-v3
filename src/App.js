@@ -17,7 +17,7 @@ function App() {
       <TogglePage >
     <div className='Theme'>
     <LoginContext.Provider value={{isLogged,setIsLogged}}>
-       {isLogged && <NavBar/>}{console.log(isLogged)}
+       {isLogged && <NavBar/>}
     <Container className='App-header'>
       <Routes>
       <Route path='/' element={<LoginPage/>}></Route>

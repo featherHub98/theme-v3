@@ -9,35 +9,39 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const { isLogged, setIsLogged } = LoginProvider;
-  const [data,setData] = useState();
+  const [userData,setUserData] = useState([]);
   const [error,setError] = useState()
   const navigate = useNavigate();
-
-  
-  useEffect(()=>{const getData = async (params) => {
-    
-    try {
-       const response = await axios.get("/user.json");
-       setData(response.data)
+const fetchData = async()=>{
+  try {
+       const response = await axios.get("http://localhost:3001/users");
+       
+       setUserData(response.data)
        
     } catch (error) {
       setError(error)
     }
-  }
-  getData();},[])
+}
+  
+  useEffect(() => {
+    fetchData()
+    
+  },[])
 
 
 
   const handleSubmit = (e) => {
+    console.log('users ', userData );
+    
     e.preventDefault();
-    for (let i = 0 ; i<data.users.length;i++){
-      console.log(data.users[i].email)
-      if ((email === data.users[i].email) && (pass === data.users[i].password)) {
+    for (let i = 0 ; i<userData.length;i++){
+      
+      if ((email === userData[i].email) && (pass === userData[i].password)) {
       navigate("/tableData"); 
       setIsLogged(true);
         break;
     } else
-      console.log("failed to connect")
+      
     console.log(isLogged)
     }
     

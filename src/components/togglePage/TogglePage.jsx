@@ -9,7 +9,7 @@ export const TogglePage=({children})=> {
     
     useEffect (()=>
        { document.documentElement.setAttribute("data-theme",theme)
-        console.log("changed theme")
+       
         },[theme]
     )
     const toggleTheme =()=>{

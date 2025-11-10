@@ -13,7 +13,7 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
 
-            <Nav.Link as={Link} to="/dummyPage">dummyPage</Nav.Link>
+            <Nav.Link as={Link} to="/tableData">table of data</Nav.Link>
             <Nav.Link as={Link} to="/contactUs">Contact Us </Nav.Link>
           </Nav>
           <Nav className="ms-auto">

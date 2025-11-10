@@ -4,31 +4,57 @@ import { Container, Table } from "react-bootstrap";
 
 
 export default function TableData() {
-  const [data,setData] = useState([]);
-  const [error,setError]=useState();
-  useEffect(()=>{
-    const fetchData = async (params) => {
+  const [coordData,setCoordData] = useState([]);
+  
+  const fetchData = async () => {
       try {
-        const response = await axios.get('/user.json')
-        setData(response.data.coord)
+        const response = await axios.get('http://localhost:3001/coord')
+       if (response.data)
+       setCoordData(response.data)
         
       } catch (error) {
         
       }
     }
+
+  useEffect(()=>{
+    
     fetchData();
 
   },[])
   
 const add = async()=>{
+ 
   try {
-    await axios.post("localhost:3001/coord/",{
-       city: "London",
-      country: "UK",
+    
+   await axios.post("http://localhost:3001/coord/",{
+       city: "Tunis",
+      country: "TN", 
       lon: -0.1276,
-      lat: 51.5074
+      lat: 51.5074,
+      id: null
   
+    }).then((res)=>{
+       
+       setCoordData(res.data)
+    }).catch((err)=>{
+      alert(err);
+      
     })
+   /*fetch('http://localhost:3001/coord', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    city: "London",
+      country: "UK", 
+      lon: -0.1276,
+      lat: 51.5074,
+      id: null
+  })
+})*/
+    
   } catch (error) {
     
   }
@@ -46,8 +72,8 @@ const add = async()=>{
         </tr>
       </thead>
       <tbody>
-       { data.map((item)=>{
-        return(<tr>
+       { coordData.map((item,index)=>{
+        return(<tr key={index}>
           <td>{item.city}</td>
           <td>{item.country}</td>
           <td>{item.lon}</td>

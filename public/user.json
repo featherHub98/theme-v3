@@ -1,52 +1,73 @@
-{"users":[
-  {
-    "id": 1001,
-    "username": "jane_doe",
-    "email": "hey@gmail.com",
-    "password": "123"
-  },
-  {
-    "id": 1002,
-    "username": "mike_ross",
-    "email": "m.ross@corp-test.com",
-    "password": "AnotherDummyPass!99"
-  },
-  {
-    "id": 1003,
-    "username": "sarah_connor",
-    "email": "s.connor@skynet.test",
-    "password": "I'llBeB@ck123"
-  }
-],
-"coord":[
-  {
-    "city": "Berlin",
-    "country": "Germany",
-    "lon": 13.4050,
-    "lat": 52.5200
-  },
-  {
-    "city": "Tokyo",
-    "country": "Japan", 
-    "lon": 139.6503,
-    "lat": 35.6762
-  },
-  {
-    "city": "Cairo",
-    "country": "Egypt",
-    "lon": 31.2357,
-    "lat": 30.0444
-  },
-  {
-    "city": "San Francisco",
-    "country": "USA",
-    "lon": -122.4194,
-    "lat": 37.7749
-  },
-  {
-    "city": "Cape Town",
-    "country": "South Africa",
-    "lon": 18.4241,
-    "lat": -33.9249
-  }
-]}
+{
+  "users": [
+    {
+      "id": "1001",
+      "username": "jane_doe",
+      "email": "hey@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "1002",
+      "username": "mike_ross",
+      "email": "m.ross@corp-test.com",
+      "password": "AnotherDummyPass!99"
+    },
+    {
+      "id": "1003",
+      "username": "sarah_connor",
+      "email": "s.connor@skynet.test",
+      "password": "I'llBeB@ck123"
+    }
+  ],
+  "coord": [
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "lon": 13.405,
+      "lat": 52.52,
+      "id": "2e1c"
+    },
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "lon": 139.6503,
+      "lat": 35.6762,
+      "id": "16a2"
+    },
+    {
+      "city": "Cairo",
+      "country": "Egypt",
+      "lon": 31.2357,
+      "lat": 30.0444,
+      "id": "b34f"
+    },
+    {
+      "city": "San Francisco",
+      "country": "USA",
+      "lon": -122.4194,
+      "lat": 37.7749,
+      "id": "c955"
+    },
+    {
+      "city": "Cape Town",
+      "country": "South Africa",
+      "lon": 18.4241,
+      "lat": -33.9249,
+      "id": "ffb4"
+    },
+    {
+      "id": "123S",
+      "city": "London",
+      "country": "UK",
+      "lon": -0.1276,
+      "lat": 51.5074
+    },
+    {
+      "id": null,
+      "city": "Tunis",
+      "country": "TN",
+      "lon": -0.1276,
+      "lat": 51.5074
+    }
+  ]
+}
