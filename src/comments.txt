@@ -6,3 +6,4 @@ problems encountered:
 5) navbar rerendering so context lost => change Navbar.Link href ='...' to Navbar.Link as={Link} to ="..." 
 so it can work like Link from react-router-dom
 6)json-server takes only 1 json file at a time 
+7)needed to put json file directly under public
