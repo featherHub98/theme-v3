@@ -33,7 +33,7 @@ function LoginPage() {
     for (let i = 0 ; i<data.users.length;i++){
       console.log(data.users[i].email)
       if ((email === data.users[i].email) && (pass === data.users[i].password)) {
-      navigate("/dummyPage"); 
+      navigate("/tableData"); 
       setIsLogged(true);
         break;
     } else
