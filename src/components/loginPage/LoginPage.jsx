@@ -1,27 +1,46 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import LoginContext from "../../hooks/LoginContext"
+import LoginContext from "../../hooks/LoginContext";
+import axios from 'axios';
 function LoginPage() {
   const LoginProvider = useContext(LoginContext)
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const { isLogged, setIsLogged } = LoginProvider;
+  const [data,setData] = useState();
+  const [error,setError] = useState()
   const navigate = useNavigate();
-  const user = {
-    email: 'hey@gmail.com',
-    pass: '123'
+
+  
+  useEffect(()=>{const getData = async (params) => {
+    
+    try {
+       const response = await axios.get("/user.json");
+       setData(response.data)
+       
+    } catch (error) {
+      setError(error)
+    }
   }
+  getData();},[])
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if ((email === user.email) && (pass === user.pass)) {
+    for (let i = 0 ; i<data.users.length;i++){
+      console.log(data.users[i].email)
+      if ((email === data.users[i].email) && (pass === data.users[i].password)) {
       navigate("/dummyPage"); 
       setIsLogged(true);
-
+        break;
     } else
       console.log("failed to connect")
     console.log(isLogged)
+    }
+    
   }
   return (
     <Form onSubmit={handleSubmit}>

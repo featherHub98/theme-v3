@@ -7,7 +7,7 @@ import DummyPage from "./components/dummyPage/DummyPage"
 import NavBar from './components/navBar/NavBar';
 import {TogglePage} from "./components/togglePage/TogglePage"
 import LoginContext from './hooks/LoginContext';
-import DummyPage2 from './components/dummyPage2/DummyPage2';
+import ContactUs from './components/dummyPage2/DummyPage2';
 function App() {
   const [isLogged,setIsLogged] = useState(false)
   
@@ -22,7 +22,7 @@ function App() {
       <Routes>
       <Route path='/' element={<LoginPage/>}></Route>
       <Route path='/dummyPage' element={<DummyPage/>}></Route>
-      <Route path='/dummyPage2' element={<DummyPage2/>}></Route>
+      <Route path='/contactUs' element={<ContactUs/>}></Route>
       </Routes>
     </Container>
     </LoginContext.Provider>

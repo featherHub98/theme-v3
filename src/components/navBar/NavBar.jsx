@@ -14,7 +14,7 @@ export default function NavBar() {
           <Nav className="me-auto">
 
             <Nav.Link as={Link} to="/dummyPage">dummyPage</Nav.Link>
-            <Nav.Link as={Link} to="/dummyPage2">dummyPage 2</Nav.Link>
+            <Nav.Link as={Link} to="/contactUs">Contact Us </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
 

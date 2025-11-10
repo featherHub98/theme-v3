@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Container,Form,Button,Modal} from 'react-bootstrap'
-export default function DummyPage2() {
+
+
+
+export default function ContactUs() {
+
   const [email,setEmail] = useState("")
   const [phone,setPhone] = useState("")
   const [message,setMessage] = useState("")
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
   const handleSubmit = (e)=>{
     e.preventDefault();
-    
-   
-
   }
   return (
    <Container>
